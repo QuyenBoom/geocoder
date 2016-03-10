@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4YM-yo-MdC">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="geocoder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="tCl-Vg-xsU">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="xZv-YF-SDJ">
+                                <rect key="frame" x="50" y="70" width="500" height="400"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geocoder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EgV-Yr-xaa">
+                                        <rect key="frame" x="0.0" y="0.0" width="500" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="DVN-Bh-aM7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="40"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="tET-z7-GFU" customClass="RoundedButton" customModule="geocoder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="160" width="500" height="80"/>
+                                        <color key="backgroundColor" red="0.24202724358974359" green="0.24202724358974359" blue="0.24202724358974359" alpha="0.43642241379310343" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="AOo-7F-5G0"/>
+                                            <constraint firstAttribute="height" constant="50" id="NYM-fx-bCg"/>
+                                            <constraint firstAttribute="width" constant="50" id="wop-po-2dL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
+                                        <state key="normal" title="Forward Geocoding">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="NYM-fx-bCg"/>
+                                                <exclude reference="wop-po-2dL"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <segue destination="2jc-Hy-muN" kind="show" id="FVb-t9-VKj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="qJH-P4-Eln" customClass="RoundedButton" customModule="geocoder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="320" width="500" height="80"/>
+                                        <color key="backgroundColor" red="0.2420272436" green="0.2420272436" blue="0.2420272436" alpha="0.43642241380000002" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Jg4-RZ-1L3"/>
+                                            <constraint firstAttribute="height" constant="50" id="Rhn-vm-zae"/>
+                                            <constraint firstAttribute="height" constant="80" id="lzd-U8-MYD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
+                                        <state key="normal" title="Reverse Geocoding">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Jg4-RZ-1L3"/>
+                                                <exclude reference="Rhn-vm-zae"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <segue destination="yZt-Kt-Xrx" kind="show" id="R7z-LI-wOP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="EgV-Yr-xaa" secondAttribute="trailing" id="FgT-5r-VAq"/>
+                                    <constraint firstItem="qJH-P4-Eln" firstAttribute="leading" secondItem="xZv-YF-SDJ" secondAttribute="leading" id="GFm-97-cHP"/>
+                                    <constraint firstAttribute="trailing" secondItem="tET-z7-GFU" secondAttribute="trailing" id="TOu-tz-hEf"/>
+                                    <constraint firstAttribute="trailing" secondItem="qJH-P4-Eln" secondAttribute="trailing" id="dt5-NR-68A"/>
+                                    <constraint firstItem="tET-z7-GFU" firstAttribute="leading" secondItem="xZv-YF-SDJ" secondAttribute="leading" id="fGd-QX-PIN"/>
+                                    <constraint firstItem="EgV-Yr-xaa" firstAttribute="leading" secondItem="xZv-YF-SDJ" secondAttribute="leading" id="hIK-b8-CUQ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="xZv-YF-SDJ" secondAttribute="trailing" constant="30" id="2C3-gF-7of"/>
+                            <constraint firstItem="tCl-Vg-xsU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="516-bH-1GC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xZv-YF-SDJ" secondAttribute="bottom" constant="10" id="JiI-2f-Dhl"/>
+                            <constraint firstAttribute="trailing" secondItem="tCl-Vg-xsU" secondAttribute="trailing" id="e6P-pz-QsC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tCl-Vg-xsU" secondAttribute="bottom" id="eHE-iL-ceu"/>
+                            <constraint firstItem="tCl-Vg-xsU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gpe-3U-Sa3"/>
+                            <constraint firstItem="xZv-YF-SDJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="70" id="lKM-HQ-k0F"/>
+                            <constraint firstItem="xZv-YF-SDJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="n4K-XL-NcA"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="JiI-2f-Dhl"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="Amf-Ll-bJR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1286" y="368"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="R2d-GM-EmG">
+            <objects>
+                <viewController id="2jc-Hy-muN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Drq-Qw-Ssc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nwu-Gg-n5h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aLx-X3-HwF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4zU-k9-yBa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1977" y="202"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8TO-qS-qnL">
+            <objects>
+                <viewController id="yZt-Kt-Xrx" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AzI-S9-Cw1"/>
+                        <viewControllerLayoutGuide type="bottom" id="cen-cT-0DW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dp2-W8-ves">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qS1-J9-9Rd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1973" y="886"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jXy-p4-P0y">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4YM-yo-MdC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1AL-HW-Gz4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QnO-hV-VdA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HZu-zz-hI0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="474" y="368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background.PNG" width="1104" height="1104"/>
+    </resources>
+</document>
