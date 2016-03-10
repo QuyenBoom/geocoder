@@ -16,6 +16,7 @@
 		22F980D61C91F7AE006CA5CB /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F980D51C91F7AE006CA5CB /* RoundedButton.swift */; };
 		22F980D81C91FA65006CA5CB /* RoundedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F980D71C91FA65006CA5CB /* RoundedLabel.swift */; };
 		22F980E41C9204FC006CA5CB /* background.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 22F980E31C9204FC006CA5CB /* background.PNG */; };
+		22F9811E1C92214A006CA5CB /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F9811D1C92214A006CA5CB /* RoundedImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		22F980D51C91F7AE006CA5CB /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		22F980D71C91FA65006CA5CB /* RoundedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedLabel.swift; sourceTree = "<group>"; };
 		22F980E31C9204FC006CA5CB /* background.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.PNG; sourceTree = "<group>"; };
+		22F9811D1C92214A006CA5CB /* RoundedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				22F980E31C9204FC006CA5CB /* background.PNG */,
 				22F980D51C91F7AE006CA5CB /* RoundedButton.swift */,
 				22F980D71C91FA65006CA5CB /* RoundedLabel.swift */,
+				22F9811D1C92214A006CA5CB /* RoundedImage.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				22F980C21C91F374006CA5CB /* ViewController.swift in Sources */,
 				22F980D81C91FA65006CA5CB /* RoundedLabel.swift in Sources */,
 				22F980D21C91F383006CA5CB /* MapTask.swift in Sources */,
+				22F9811E1C92214A006CA5CB /* RoundedImage.swift in Sources */,
 				22F980C01C91F374006CA5CB /* AppDelegate.swift in Sources */,
 				22F980D61C91F7AE006CA5CB /* RoundedButton.swift in Sources */,
 			);
