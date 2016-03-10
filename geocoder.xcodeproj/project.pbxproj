@@ -318,6 +318,7 @@
 				22F980D01C91F374006CA5CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
