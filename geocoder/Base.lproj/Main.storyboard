@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Choose View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="geocoder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ChooseViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="xZv-YF-SDJ">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="xZv-YF-SDJ">
                                 <rect key="frame" x="50" y="70" width="500" height="390"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oYn-rP-mo7">
@@ -119,7 +119,7 @@
         <!--Forward Geocoding-->
         <scene sceneID="R2d-GM-EmG">
             <objects>
-                <viewController title="Forward Geocoding" id="2jc-Hy-muN" sceneMemberID="viewController">
+                <viewController title="Forward Geocoding" id="2jc-Hy-muN" customClass="FGInputController" customModule="geocoder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Drq-Qw-Ssc"/>
                         <viewControllerLayoutGuide type="bottom" id="Nwu-Gg-n5h"/>
@@ -213,6 +213,9 @@
                             <constraint firstItem="qwV-zg-7tF" firstAttribute="centerX" secondItem="aLx-X3-HwF" secondAttribute="centerX" id="tbF-lq-gDB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="inputAddress" destination="8HD-LX-MoJ" id="dAe-gx-F98"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4zU-k9-yBa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -221,7 +224,7 @@
         <!--Geocode Result-->
         <scene sceneID="DPd-33-kc9">
             <objects>
-                <viewController title="Geocode Result" id="N64-cK-aJm" sceneMemberID="viewController">
+                <viewController title="Geocode Result" id="N64-cK-aJm" customClass="FGResultController" customModule="geocoder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oh7-Wx-1nF"/>
                         <viewControllerLayoutGuide type="bottom" id="LKt-eb-VA1"/>
@@ -316,6 +319,9 @@
                             <constraint firstAttribute="bottom" secondItem="qd5-RI-zZM" secondAttribute="bottom" id="Yig-Cl-zZq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="displayAddress" destination="3N7-NO-Tkg" id="YPQ-Th-e4k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pok-vb-2tI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -554,7 +560,7 @@
         <image name="target" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CoI-Ey-Epn"/>
+        <segue reference="FVb-t9-VKj"/>
         <segue reference="XRN-rx-b8A"/>
     </inferredMetricsTieBreakers>
 </document>

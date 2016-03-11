@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		22F980C01C91F374006CA5CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F980BF1C91F374006CA5CB /* AppDelegate.swift */; };
-		22F980C21C91F374006CA5CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F980C11C91F374006CA5CB /* ViewController.swift */; };
+		22F980C21C91F374006CA5CB /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F980C11C91F374006CA5CB /* ChooseViewController.swift */; };
 		22F980C51C91F374006CA5CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F980C31C91F374006CA5CB /* Main.storyboard */; };
 		22F980C71C91F374006CA5CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F980C61C91F374006CA5CB /* Assets.xcassets */; };
 		22F980CA1C91F374006CA5CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F980C81C91F374006CA5CB /* LaunchScreen.storyboard */; };
@@ -17,12 +17,16 @@
 		22F980D81C91FA65006CA5CB /* RoundedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F980D71C91FA65006CA5CB /* RoundedLabel.swift */; };
 		22F980E41C9204FC006CA5CB /* background.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 22F980E31C9204FC006CA5CB /* background.PNG */; };
 		22F9811E1C92214A006CA5CB /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F9811D1C92214A006CA5CB /* RoundedImage.swift */; };
+		22F981211C9230D6006CA5CB /* FGInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F981201C9230D6006CA5CB /* FGInputController.swift */; };
+		22F981231C9230F7006CA5CB /* FGResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F981221C9230F7006CA5CB /* FGResultController.swift */; };
+		22F981251C923119006CA5CB /* RGInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F981241C923119006CA5CB /* RGInputController.swift */; };
+		22F981271C923134006CA5CB /* RGResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F981261C923134006CA5CB /* RGResultController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		22F980BC1C91F374006CA5CB /* geocoder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = geocoder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F980BF1C91F374006CA5CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		22F980C11C91F374006CA5CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		22F980C11C91F374006CA5CB /* ChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
 		22F980C41C91F374006CA5CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22F980C61C91F374006CA5CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22F980C91C91F374006CA5CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,6 +36,10 @@
 		22F980D71C91FA65006CA5CB /* RoundedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedLabel.swift; sourceTree = "<group>"; };
 		22F980E31C9204FC006CA5CB /* background.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.PNG; sourceTree = "<group>"; };
 		22F9811D1C92214A006CA5CB /* RoundedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
+		22F981201C9230D6006CA5CB /* FGInputController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FGInputController.swift; sourceTree = "<group>"; };
+		22F981221C9230F7006CA5CB /* FGResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FGResultController.swift; sourceTree = "<group>"; };
+		22F981241C923119006CA5CB /* RGInputController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGInputController.swift; sourceTree = "<group>"; };
+		22F981261C923134006CA5CB /* RGResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGResultController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +72,10 @@
 		22F980BE1C91F374006CA5CB /* geocoder */ = {
 			isa = PBXGroup;
 			children = (
+				22F9811F1C9230AC006CA5CB /* Controller */,
 				22F980D41C91F790006CA5CB /* View */,
 				22F980D31C91F784006CA5CB /* Model */,
 				22F980BF1C91F374006CA5CB /* AppDelegate.swift */,
-				22F980C11C91F374006CA5CB /* ViewController.swift */,
 				22F980C31C91F374006CA5CB /* Main.storyboard */,
 				22F980C61C91F374006CA5CB /* Assets.xcassets */,
 				22F980C81C91F374006CA5CB /* LaunchScreen.storyboard */,
@@ -93,6 +101,18 @@
 				22F9811D1C92214A006CA5CB /* RoundedImage.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		22F9811F1C9230AC006CA5CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				22F980C11C91F374006CA5CB /* ChooseViewController.swift */,
+				22F981201C9230D6006CA5CB /* FGInputController.swift */,
+				22F981221C9230F7006CA5CB /* FGResultController.swift */,
+				22F981241C923119006CA5CB /* RGInputController.swift */,
+				22F981261C923134006CA5CB /* RGResultController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,11 +187,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22F980C21C91F374006CA5CB /* ViewController.swift in Sources */,
+				22F980C21C91F374006CA5CB /* ChooseViewController.swift in Sources */,
+				22F981251C923119006CA5CB /* RGInputController.swift in Sources */,
 				22F980D81C91FA65006CA5CB /* RoundedLabel.swift in Sources */,
 				22F980D21C91F383006CA5CB /* MapTask.swift in Sources */,
+				22F981231C9230F7006CA5CB /* FGResultController.swift in Sources */,
 				22F9811E1C92214A006CA5CB /* RoundedImage.swift in Sources */,
 				22F980C01C91F374006CA5CB /* AppDelegate.swift in Sources */,
+				22F981271C923134006CA5CB /* RGResultController.swift in Sources */,
+				22F981211C9230D6006CA5CB /* FGInputController.swift in Sources */,
 				22F980D61C91F7AE006CA5CB /* RoundedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
