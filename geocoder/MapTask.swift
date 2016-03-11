@@ -26,32 +26,43 @@ class MapTask: NSObject {
         super.init()
     }
     
-    func geocodeAddress(address: String!) {
-        var geocodeURLString = baseURLGeocode + "address=" + address
-        geocodeURLString = geocodeURLString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
-        let geocodeURL = NSURL(string: geocodeURLString)!
-        let session = NSURLSession.sharedSession()
-        
-        session.dataTaskWithURL(geocodeURL){(data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
-            if let responseData = data {
-             
+    
+    func geocodeAddress(address: String!, withCompletionHandler completionHandler: ((status: String, success: Bool) -> Void)) {
+        if let lookupAddress = address {
+            var geocodeURLString = baseURLGeocode + "address=" + lookupAddress
+            geocodeURLString = geocodeURLString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
+            
+            let geocodeURL = NSURL(string: geocodeURLString)
+            
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                let geocodingResultsData = NSData(contentsOfURL: geocodeURL!)
+                
                 do {
+                    let dictionary: Dictionary<NSObject, AnyObject> = try NSJSONSerialization.JSONObjectWithData(geocodingResultsData!, options: NSJSONReadingOptions.MutableContainers) as! Dictionary<NSObject, AnyObject>
                     
-                    let json = try NSJSONSerialization.JSONObjectWithData(responseData, options: NSJSONReadingOptions.AllowFragments)
-                    self.lookupAddressResults = json as! Dictionary<NSObject, AnyObject>
-                    self.results = self.lookupAddressResults["results"]![0] as! Dictionary<NSObject, AnyObject>
-                    self.fetchedFormattedAddress = self.results["formatted_address"] as! String
+                    // Get the response status.
+                    let status = dictionary["status"] as! String
                     
-                    var location = self.results["geometry"]!["location"] as! Dictionary<NSObject, AnyObject>
+                    if status == "OK" {
+                        let allResults = dictionary["results"] as! Array<Dictionary<NSObject, AnyObject>>
+                        self.lookupAddressResults = allResults[0]
+                    }
                     
-                    self.fetchedAddressLatitude = location["lat"] as! Double
-                    self.fetchedAddressLongitude = location["lng"] as! Double
+                    // Keep the most important values.
+                    self.fetchedFormattedAddress = self.lookupAddressResults["formatted_address"] as! String
+                    let geometry = self.lookupAddressResults["geometry"] as! Dictionary<NSObject, AnyObject>
                     
-                    print(self.fetchedAddressLongitude)
+                    self.fetchedAddressLongitude = ((geometry["location"] as! Dictionary<NSObject, AnyObject>)["lng"] as! NSNumber).doubleValue
+                    self.fetchedAddressLatitude = ((geometry["location"] as! Dictionary<NSObject, AnyObject>)["lat"] as! NSNumber).doubleValue
+                    
+                    completionHandler(status: status, success: true)
+                    
                 } catch {
-                print("Could not get data")
+                    print("something bad")
                 }
-            }
-        }.resume()
+                
+            })
+        }
     }
+    
 }

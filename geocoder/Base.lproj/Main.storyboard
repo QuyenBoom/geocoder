@@ -321,6 +321,8 @@
                     </view>
                     <connections>
                         <outlet property="displayAddress" destination="3N7-NO-Tkg" id="YPQ-Th-e4k"/>
+                        <outlet property="displayLat" destination="mgi-ca-N15" id="cXn-sN-TsQ"/>
+                        <outlet property="displayLon" destination="P2s-IG-VmD" id="nEz-U8-Dgi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pok-vb-2tI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -330,7 +332,7 @@
         <!--Reverse Geocoding-->
         <scene sceneID="8TO-qS-qnL">
             <objects>
-                <viewController title="Reverse Geocoding" id="yZt-Kt-Xrx" sceneMemberID="viewController">
+                <viewController title="Reverse Geocoding" id="yZt-Kt-Xrx" customClass="RGInputController" customModule="geocoder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AzI-S9-Cw1"/>
                         <viewControllerLayoutGuide type="bottom" id="cen-cT-0DW"/>
@@ -456,7 +458,7 @@
         <!--Geocode Result-->
         <scene sceneID="Sp0-Fm-Ikk">
             <objects>
-                <viewController title="Geocode Result" id="oWr-tg-sgR" sceneMemberID="viewController">
+                <viewController title="Geocode Result" id="oWr-tg-sgR" customClass="RGResultController" customModule="geocoder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oQ1-PD-8Nv"/>
                         <viewControllerLayoutGuide type="bottom" id="kax-Go-EU8"/>
@@ -536,8 +538,8 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="iVE-Eu-gF5"/>
                                         <exclude reference="LR9-M0-n8q"/>
+                                        <exclude reference="iVE-Eu-gF5"/>
                                     </mask>
                                 </variation>
                             </scrollView>
@@ -560,7 +562,7 @@
         <image name="target" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FVb-t9-VKj"/>
         <segue reference="XRN-rx-b8A"/>
+        <segue reference="CoI-Ey-Epn"/>
     </inferredMetricsTieBreakers>
 </document>

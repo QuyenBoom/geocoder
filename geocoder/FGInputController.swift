@@ -17,8 +17,9 @@ class FGInputController: UIViewController {
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let ResultVC = segue.destinationViewController as! FGResultController
+        if let ResultVC = segue.destinationViewController as? FGResultController{
         ResultVC.rawAddress = inputAddress.text
+        }
     }
 
 }
